@@ -4,7 +4,7 @@ package co.grandcircus.fbjava_july2018.lab_07;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Lab07Validator {
+public class Lab_07_Validator {
 	
 	// **NEW METHODS AFTER LINE 122**)
 	
@@ -135,7 +135,26 @@ public class Lab07Validator {
 	
 	/**
 	 * NEW: Date Validation. Check if in the (dd/mm/yyyy) format.
+	 * A better solution is to figure out how to integrate <import java.time.format.DateTimeFormatter>,
+	 * but I'm outta time to figure it out. Also could automatically enter age based on this input.
 	 */
+	
+	public static String getDateStringMatchingRegex(Scanner scnr, String prompt, String regex) {
+		boolean isValid = false;
+		String input;
+		do {
+			input = getString(scnr, prompt);
+			
+			if (input.matches(regex)) {
+				isValid = true;
+			} else {
+				System.out.println("Input must match the appropriate date format of DD/MM/YYYY.");
+				isValid = false;
+			}
+			
+		} while (!isValid);
+		return input;
+	}
 	
 	/**
 	 * NEW: OPTIONAL Extended Challenges.
