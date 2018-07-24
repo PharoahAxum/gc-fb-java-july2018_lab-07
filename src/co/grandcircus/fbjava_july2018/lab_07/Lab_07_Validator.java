@@ -132,6 +132,22 @@ public class Lab_07_Validator {
 	/**
 	 * NEW: Phone Number Validation. Check if in the (xxx) xxx-xxxx format.
 	 */
+	public static String getPhoneStringMatchingRegex(Scanner scnr, String prompt, String regex) {
+		boolean isValid = false;
+		String input;
+		do {
+			input = getString(scnr, prompt);
+			
+			if (input.matches(regex)) {
+				isValid = true;
+			} else {
+				System.out.println("Input must match the appropriate phone number format of (999)123-4567.");
+				isValid = false;
+			}
+			
+		} while (!isValid);
+		return input;
+	}
 	
 	/**
 	 * NEW: Date Validation. Check if in the (dd/mm/yyyy) format.
