@@ -1,10 +1,11 @@
-package co.grandcircus.fbjava_july2018.lab_07;
+package co.grandcircus.lab_07;
 
+// TODO replace with the improved validation file used in later labs.
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Lab_07_Validator {
+public class Validation {
 	
 	// **NEW METHODS AFTER LINE 122**)
 	

@@ -1,8 +1,8 @@
-package co.grandcircus.fbjava_july2018.lab_07;
+package co.grandcircus.lab_07;
 
 import java.util.Scanner;
 
-public class Lab_07 { // <formerly> public class ValidationDemo {
+public class UserDataApp { // <formerly> public class ValidationDemo {
 
 	public static void main(String[] args) {
 	
@@ -11,13 +11,13 @@ public class Lab_07 { // <formerly> public class ValidationDemo {
 			
 			Scanner scnr = new Scanner(System.in);
 				
-			String name = Lab_07_Validator.getStringMatchingRegex(scnr, "Enter first name: ", "[A-Z][a-z]*");
-			String phoneNum = Lab_07_Validator.getPhoneStringMatchingRegex(scnr, "Enter your telephone numer"
+			String name = Validation.getStringMatchingRegex(scnr, "Enter first name: ", "[A-Z][a-z]*");
+			String phoneNum = Validation.getPhoneStringMatchingRegex(scnr, "Enter your telephone numer"
 					+ " with area code: ", "\\(\\d{3}\\)\\d{3}-?\\d{4}");
-			int age = Lab_07_Validator.getInt(scnr, "Enter your age: ", 0, 150);
-			String usrDate = Lab_07_Validator.getDateStringMatchingRegex(scnr, "Enter the date of your birth,"
+			int age = Validation.getInt(scnr, "Enter your age: ", 0, 150);
+			String usrDate = Validation.getDateStringMatchingRegex(scnr, "Enter the date of your birth,"
 					+ " as DD/MM/YYYY: ", "[0-3][0-9]/[0-1][0-9]/[0-9]{4}");
-			double heightInFeet = Lab_07_Validator.getDouble(scnr, "Enter your height (in feet): ", 0, 10);
+			double heightInFeet = Validation.getDouble(scnr, "Enter your height (in feet): ", 0, 10);
 				
 			System.out.println("Name: " + name);
 			System.out.println("Phone Number: " + phoneNum);
